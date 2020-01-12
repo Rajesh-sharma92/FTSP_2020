@@ -12,6 +12,7 @@ print('**********************************')
 
 s=input('Enter the some string to Reversed :')
 r=reversed(s) # in-built function.
+# output='_'.join(r)
 output=''.join(r)
 print(output)
 
