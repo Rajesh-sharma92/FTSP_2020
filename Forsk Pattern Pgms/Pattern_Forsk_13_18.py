@@ -68,6 +68,11 @@ for i in range(n):
     print()
     
  " pg : (18) WAP to print this below pattern."
+ 
+            AAAA 
+            BBB 
+            CC 
+            D 
 
 n = int(input('Enter n value :'))
 for i in range(n):
