@@ -105,6 +105,13 @@ plt.show()
 df.columns
 
 # Graph and show which Job Title spends the most.
+df['HireDate'].value_counts()
+df['HireDate'].unique()
+
+plt.pie(df['HireDate'].value_counts(dropna=False),labels=df['HireDate'].unique(),radius =3 , autopct='%1.2f%%')
+plt.savefig('E:\Forsk Pandas\Baltmore1.jpg')
+plt.show()
+
 
 # List All the Agency ID and Agency Name.
 
