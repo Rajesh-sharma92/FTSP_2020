@@ -66,9 +66,42 @@ plt.title('Experience & Salaries Graph')
 plt.savefig('E:\Mechine Learning Forsk\Exp_sal.jpg')
 plt.show()
 
+-----------------------------------------------------------------------------------------
+NOTE :- We will be solving this problem by using the train_test_split() method.
 
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
+dataset = pd.read_csv('E:\ML Code Challenges\ML CSV Files\Income_Data.csv')
+print(dataset)
 
+# We know that , y = mx+c
+# We need to use first we need to find the feartures(Experience) & Labels(Income).
+features = dataset.iloc[:,: 1].values
+labels = dataset.iloc[:,-1].values
+
+from sklearn.model_selection import train_test_split
+features_train,features_test,labels_train,labels_test = train_test_split(features,labels,test_size=0.2,random_state=0)
+
+from sklearn.linear_model import LinearRegression
+regg = LinearRegression() # Object creation / Model Creation.
+regg.fit(features_train,labels_train) # Trainig the model / Fitting the model.
+
+labels_pred = regg.predict(features_test)
+
+df = pd.DataFrame({'Actual':labels_test,'Predicated':labels_pred})
+print(df)
+
+# We will plot the graph of these values.
+
+plt.scatter(features_test,labels_test,color='blue')
+plt.plot(features_train,regg.predict(features_train),color='orange')
+plt.xlabel('No. of Experience')
+plt.ylabel('Salaries Details')
+plt.title('Experience & Salaries Graph')
+plt.savefig('E:\Mechine Learning Forsk\Exp_sal1.jpg')
+plt.show()
 
 
 
