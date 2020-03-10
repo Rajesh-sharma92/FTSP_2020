@@ -121,7 +121,47 @@ exception handled or not does not matter at all.
 NOTE :- The specility of finally block is that first finally block will be 
 executed then Abnormal termination of the program.
 -------------------------------------------------------------------------------------------------------------------
+Question :- Could you please tell me when will be the finally block will not be executed ?.
+Answer :- finally block always executed irrespectively of wheather exception raised or not and 
+exception handled or not does not matter at all.
+If we use os._exit(0) then finally block will not executed and PVM will be down.
 
+Ex :- 
+
+import os
+
+try:
+    print('try block')
+    # os._exit(0)
+except ValueError:
+    print('Except block')
+finally:
+    print('finally block')
+
+************* Result*********
+try block
+
+
+NOTE :- If we are using os._exit(0) program will terminate there only and it will not executed further.
+NOTE :- here 0 means status code and here we can use any number like +ve & -ve and it will be terminated the 
+program but If we are using 0 means Normal/Graceful termination and non-zero means Abnormal termination internally.
+------------------------------------------------------------------------------------------------------------------
+
+os._exit(0) Vs. finally block :-
+-----------------------------
+NOTE :- There is only one situtaion where finally block will not be executed if we are
+using os._exit(0).
+NOTE :- Whenever we are using os._exit(0) then python virtual machine itself 
+will be shutdown. In this particular case finally block will not executed.
+
+ 
+
+
+
+
+    
+    
+    
 
 
 
