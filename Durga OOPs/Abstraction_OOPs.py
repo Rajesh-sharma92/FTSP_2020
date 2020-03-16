@@ -218,6 +218,42 @@ b.sub() # 400
 Add : 600
 Sub : 400
 
+------------------------------------------------------------------------------------
+from abc import ABC , abstractmethod
+
+class Math(ABC): # Abstract class
+    
+    def __init__(self,a,b): # Constructor 
+        self.a = a
+        self.b = b
+        
+    @abstractmethod   
+    def add(self):
+        pass
+    @abstractmethod
+    def sub(self):
+        pass
+    
+class B(Math): # Child Class
+    
+    def add(self):
+        print('Add :', self.a + self.b)
+    
+    def sub(self):
+        print('Sub :', self.a - self.b)
+        
+b = B(500,100)
+b.add() # 600
+b.sub() # 400
+
+************* Result *******
+Add : 600
+Sub : 400
+
+
+
+
+
 
 
 
