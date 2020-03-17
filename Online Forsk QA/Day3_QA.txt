@@ -1,0 +1,486 @@
+Q1. What is the difference b/w if and elif ?
+Answer :- 
+            note:- if and elif both are take condition.
+               
+            but elif always write after if condition if we want to take more condition in our program. then we use elif condition.
+            for further we can understand by example
+
+            #program giving grade according to marks.
+
+            marks = int(input("Enter marks: "))
+
+            if marks > 60:
+                print("Grade A")
+            elif marks >= 45 and marks <= 60: 
+                print("Grade B")
+            else:
+                print("Fail")
+
+            output:
+            Enter marks: 55
+            Grade B
+
+
+
+Q2. Is it compulsory to use else in the end ?
+Answer :- 
+          No, It is not compulsory to use in python. because python is a scripting language.
+          
+          Ex :- 
+
+          list = ["Ram","Mohan","Seeta","Ramesh"]
+
+          for name in list:
+               if name[0] == "R":  #here we are using only if condition not need to use else.
+                     print(name)
+  
+          output:-
+          Ram
+          Ramesh
+
+
+
+Q3. Can we write number++ instead of number=number+1 in python ?
+Answer :- 
+	  No, we do not use "number++" here, for increment of number. 
+          we can only two types use for increment of number
+          1) number += 1
+          2) number = number + 1
+          
+          Ex:-
+          number = 0
+          while (number<10):
+                 print(number)
+                 number +=1     
+                # number = number + 1
+
+          output:-
+          0 1 2 3 4 5 6 7 8 9
+
+
+Q4. Can we use for increment number++ ?
+Answer :- 
+	  No, we do not use "number++" here, for increment of number. 
+          we can only two types use for increment of number
+          1) number += 1
+          2) number = number + 1
+          
+          Ex:-
+          number = 0
+          while (number<10):
+                 print(number)
+                 number +=1     
+                # number = number + 1
+
+          output:-
+          0 1 2 3 4 5 6 7 8 
+
+
+Q5. Can we use exit() function instead of break ?
+Answer :- No, We can not use exit() Function instead of break.
+          if we use exit() function then our console will Restart and it will not any result.
+          
+          Ex 1:-
+         list = ["Ram","Mohan","Seeta","Ramesh"]
+
+         for name in list:
+              if name[0] == "S":
+                   break
+              print(name)
+         
+         output:-
+         Ram
+         Mohan
+ 
+        Ex 2:-
+         list = ["Ram","Mohan","Seeta","Ramesh"]
+
+         for name in list:
+              if name[0] == "S":
+                   exit()
+              print(name)
+         
+         output:-
+             
+                   Kernel Will Restart
+
+
+Q6.If We are using exit() kernal is closed and new kernal is started ?
+Answer :- If we are using exit() function in the program then Kernal will be closed and Re-starting.
+
+Ex :-
+         list = ["Ram","Mohan","Seeta","Ramesh"]
+
+         for name in list:
+              if name[0] == "S":
+                   exit()
+              print(name)
+         
+         output :- Kernel Will Restart
+             
+                   
+
+
+
+Q7. How will you print the names starts only with R ?
+Answer :- 
+Ex :- 
+
+          list = ["Ram","Mohan","Seeta","Ramesh"]
+
+          for name in list:
+               if name[0] == "R":  #here we are using only if condition not need to use else.
+                     print(name)
+  
+          output:-
+          Ram
+          Ramesh
+
+Q8. Suppose if there is a list having no.=5 two times and 
+we want to print the data next from 2nd 5th, then what should be the program ?
+Answer :- 
+ 
+	list = [2,5,9,8,5,4,6,2,7]
+	a = []
+
+	for index,i in enumerate(list):
+    		if list[index] == 5:
+        	a.append(index)
+
+	b = a[1]
+	for i in list[b:]:
+    	print(i)
+
+	Result : - 5
+		   4
+		   6
+		   2
+		   7
+
+Q9. If we want to break the infinite loop at run time in pycharm than what we have to press ?
+Answer :- 
+
+PyCharm implements the terminal functionality with a bundled plugin.
+which can be completely disabled by clearing the Terminal checkbox on the the Plugins page of PyCharm settings Ctrl+Alt+S . 
+Specify the working directory where the terminal will be launched.
+
+NOTE :- We can stop the current execution by pressing some from keyboard like CTRL+C.
+
+
+
+Q10. Here list only support same data type like arrays ?
+Answer :-
+
+	list1 = ['Forsk','school',10,20,30.5,50.89,-23,0,1,-9]
+	print(list1)
+
+	list1[0] # 'Forsk'
+
+	list1[-1] # -9
+
+	list1[:5] # ['Forsk', 'school', 10, 20, 30.5]
+
+	list1[1:-1]  # ['school', 10, 20, 30.5, 50.89, -23, 0, 1]
+
+
+
+
+Q11. As we applied the RANGE function on Integers, Can we apply the RANGE function on STRING ?
+Answer :- 
+
+range() function only works with the integers i.e. whole numbers.User can not pass a string or float number or any other type in a start, 
+stop and step argument of a range(). All three arguments can be positive or negative. The step value must not be zero
+
+
+for i in range(10):
+    print(i , end=' ')
+    
+
+str1 = 'Forsk coding school'
+
+for ch in str1:
+    
+    print(ch , end=' ')
+    
+
+
+Q12. What is random function ?
+
+Answer :- 
+	It is used to generate the random numbers like Integers 1,6,9,0,100.
+	First of all we need to import the Random numbers than we should it.
+	Python offers random module that can generate random numbers. 
+	These are pseudo-random number as the sequence of number generated depends on the seed.
+	If the seeding value is same, the sequence will be the same. For example, 
+	if you use 2 as the seeding value, you will always see the following sequence.
+
+	from random import random
+
+	random() # 0.568624355739006
+
+	random() # 0.7953050641620346
+
+	random() # 0.4211208306247237
+
+
+
+
+Q13. WAP to print a name from a list using for loop how to do it ?
+Answer :- 
+
+Ex :- 1
+
+list1 = ['FORSK','CODING','SCHOOL','JAIPUR']
+
+for name in list1:
+    print(name , end=' ') # FORSK CODING SCHOOL JAIPUR 
+    
+Ex :- 2
+
+list2 = ['Rajesh','sharma','sandeep','Mohit','Ravi']  
+
+for name in list2:
+    print(name , end=' ') # Rajesh sharma sandeep Mohit Ravi 
+
+ 
+
+
+
+Q15. If we run any infinite loop than how we can come out from that loop?
+Answer :- Infinite loops means while(True) or while(1).
+
+	while(True):
+   	   x = input('enter the value of n :')
+    		if not x:
+        	    break
+    		print(x)
+    
+ Result : -
+
+enter the value of n :10
+10
+
+enter the value of n :20
+20
+
+enter the value of n :30
+30
+
+enter the value of n :
+
+
+
+
+Q16. Why the names get printed in the new line every time ?
+Answer :- 
+
+list1 = ['Forsk','Technologies','Jaipur','India']
+for name in list1:
+    print(name) 
+    
+    Result :- 
+    Forsk
+    Technologies
+    Jaipur
+    India
+    
+
+for name in list1:
+    print(name,end=' ')
+
+Result :-  Forsk Technologies Jaipur India 
+
+
+
+
+
+Q17. Is it important  to use list for execution of for loop ?
+Answer :- In Python there so many concepts available like for you can use with lists,tuples,set and dictionaries.
+
+
+list1 = ['Forsk','Technologies','Jaipur','India']
+for name in list1:
+    print(name) 
+    
+    Result :- 
+    Forsk
+    Technologies
+    Jaipur
+    India
+    
+
+str1 = 'FORSK CODING SCHOOL'
+for ch in str1:
+    print(ch, end=' ')
+
+
+
+
+
+Q18. Pls explain this below example ?
+
+values = range(10,20)
+
+for number in values:
+        if(number==15):
+               continue #  If the condition is True then it will not be consider the
+                        # Then it will Ignore that condition value and prints further.
+        print(number)
+
+
+
+values = range(10,20)
+
+for number in values:
+        if(number==15):
+               break # It will break the loops there only.
+        print(number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
