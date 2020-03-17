@@ -1,0 +1,593 @@
+Q1. difference between a Data Analyst and a Data Scientist ?
+
+Answer :-
+
+Data Scientist :-  who can predict the future data based on previous (past) data and to get the better predictions  for 
+                   latest projects as per industries requirement. Here We will be using the Machine Learning (ML) Concepts.
+		   In the ML we use the differnt Algorithms to get the better predictions.
+
+
+Data Analyst :-  Data analysts are the one who do the day-to-day analysis stuff.A data analyst will solve the questions 
+		 given by the business. To analysis on data we use some important libraries like Pandas , Numpay and etc.
+
+
+
+
+Q2. what is the use of None datatype in python ?
+Answer :- 
+          None datatype is a reserved keyword,which is an object that indicates no value.
+          None is the return value of functions that "don't return anything".
+          Ex :- x = 100 
+		print(x)
+		O/P = 100
+		
+		If x is no longer required then we will be assign x = None
+		X = None
+		print(x)
+		
+		O/P :- Here we will get the None in the result coz currently x value will be as None.
+
+
+
+
+
+Q3. At a time just one statement is running ? What to do to run entire program ?
+Answer :- 
+	  It's all upon you,you can run only single statement or multiple statement by selecting those and press shift + enter.
+          For run entire programme you have to press F5 function key. 
+		
+	Ex :-   s = 'Forsk coding school'
+	  	print(s)
+
+
+
+Q4. What is the difference b/w str[1] and str[0:1] ?
+Anwser :- 
+          str = 'Forsk coding school'
+
+		 Syntax :- [Start : end -1 , step]
+			
+		'F o r s k c o d i n g  s  c  h  o  o  l'
+		 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+	         print(str[1])    then output is "o" . It is called indexing. if there is space in between words then space should be counted as 1.
+
+
+                 print(str[0:1])  then output is "o" .It is called slicing. you can print selected words.In slicing (end -1).
+
+		 print(str[0:5])   then output is "Forsk".
+
+		 print(str[1:5:2])  then output will be "os oi"
+
+
+
+Q5. How to print string in reverse  order ?
+Answer :- 
+str = 'Forsk coding school'
+
+str[-1: :-1] --> 'loohcs gnidoc ksroF'
+
+str[: :-1] --> 'loohcs gnidoc ksroF'
+
+
+
+Q6. How to avoid space b/w in strings ?
+
+Answer :- 
+	str = 'Forsk coding school'
+	
+	s1 = str.replace(" ","")
+	
+	print(s1) # 'Forskcodingschool'
+
+
+
+syntax :- string_name.replace(old, new)
+
+
+
+Q7. Can we use slicing concept in backward indexing ?
+Answer :- Yes. we can do it. 
+
+	str = 'Forsk coding school'
+
+	str[-1: :-1] --> 'loohcs gnidoc ksroF'
+
+
+
+
+Q8. Can we use stepping in reverse index as well ?
+Answer :- Yes. we can do it. 
+
+	str1 = 'Forsk coding school'
+
+	str1[: : -2] --> 'loc ndckrF'
+
+
+
+
+Q9. How to define string size in python ?
+Answer :- Here we can define size of any string in python by using len() function.
+
+ Ex :- 	str1 = 'Forsk coding school'
+	
+	print(len(str1)) ---> 19 , NOTE :- here length function includes the total size of string and It length always starts from 1. and Indexing starts from zero(0).
+
+
+
+
+Q10. Can we print whole string by using of reverse indexing ?
+Answer :- Yes, We can perform this by using slicing concept in python.
+	Ex :- 
+	str1 = 'Forsk coding school'
+	
+	str1[ : : -1]
+
+
+
+Q11. Can we replace any character in strings ?	
+Answer :- Yes, We can do it by using the replace() function.
+Ex :- 
+ 	str1 = 'Forsk coding school'
+	
+	str1.replace('c','C') ---> 'Forsk Coding sChool'
+	
+	str1.replace('o','O') ---> 'FOrsk cOding schOOl'
+
+
+
+Q12. Can we print the –ve indexing in string ?
+Answer :- Yes, We can do it by slicing concept in python.
+
+Ex :- str1 = 'Forsk coding school'
+
+str1[-5] ---> 'c'
+
+str1[:-10] ---> 'Forsk cod'
+
+
+
+
+Q13. Can we write str1='f' in python ?
+Answer :- Yes, We can do it and pls see the below example.
+
+	str1 = 'f'
+	print(str1) ---> f
+
+	str2 = "f"
+	print(str2) ---> f
+
+	str3 = '''f'''
+	print(str3) ---> f
+
+
+
+Q14. Can we pass argument in split function ?
+Answer :- Yes, We can pass any argument into split function and after spliting it will be inside the list.
+
+Ex :- 
+
+str1 = 'Forsk coding school'
+
+s2 = str1.split(' ') # Here we are passing the space as an argument.
+
+print(str1) # Forsk coding school
+
+print(s2) # ['Forsk', 'coding', 'school']
+
+
+
+
+Q15. Can we concatenated two strings OR can we merge 2 strings ?
+Answer :- Yes, We can merge 2 strings by doing concatenation like plus operator (+).
+
+str1 = 'Forsk coding school'
+str2 = ' at Jaipur, India'
+str3 = str1+str2
+print(str3) # Forsk coding school at Jaipur, India
+
+
+
+
+
+Q16.  How the string is immutable ?
+
+s1 = 'Forsk'
+s2 = s1.upper()
+
+print(s2) #  'FORSK'
+
+print(s1) # 'Forsk'
+
+NOTE :- Here s2 string will be just changed on console but it will not be changed 
+in the actual string like s1. s1 always remains the same. That's why we can called 
+strings are Immutable.
+
+Strings are Immutable Means :- It means we can some operation on strings but it will
+---------------------------  not be affected in actual strings.
+
+Ex :-
+
+str1 = 'FORSK CODING SCHOOL'
+s2 = str1.lower()
+
+print(s2) # 'forsk coding school'
+
+print(str1) # 'FORSK CODING SCHOOL'
+
+
+
+Q17. How to remove white space in string ?
+
+str1 = 'Forsk coding school'
+s2 = str1.replace(' ','')
+print(s2)
+
+s1 = 'JAIPUR IS IN RAJASTHAN , INDIA'
+s2 = s1.replace(' ','**')
+print(s2)
+
+NOTE :- In the above 2 examples we can see that we can replace the white space with any special characters or space also.
+
+
+
+
+Q18. Can we pass an argument in the upper function  ?
+
+def Big_Letter(text):  
+    return text.upper()  
+    
+print(Big_Letter('hello'))  
+    
+Result = Big_Letter
+    
+print(Result('hello'))
+
+NOTE :- Yes, We can but not directly inside the upper() function. We just need to create a function then we need to use it.
+
+
+
+
+Q19. Can we use keyword as identifier in python ?
+Answer : - No we can not coz Keywords are the reserved words in Python.
+
+Keywords are the reserved words in Python. We cannot use a keyword as a variable name, function name or any other identifier. 
+They are used to define the syntax and structure of the Python language.All the keywords except True , False and None are in 
+lowercase and they must be written as it is.
+
+A Python identifier is a name used to identify a variable, function, class, module or other object. 
+An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
+
+Ex :- 
+
+a = 10
+print(a) # 10
+
+_x = 200
+print(_x) # 200
+
+x123 = 25
+print(x123) # 25
+
+z_90 = 100
+print(z_90) # 100
+
+# 8A = 45
+8_A = 45
+print(8A) # It is not valid coz , Variables or identifiers should not starts with numbers. like 0 - 9.
+
+
+
+
+Q20. What is the difference between strip() and replace()?
+Answer :-
+
+strip() :-
+
+s1 = '    Forsk Technologies  '
+s2 = s1.strip()
+
+print(s1) # '    Forsk Technologies  '
+
+print(s2) # Forsk Technologies
+
+replace() :-
+
+s1 = 'Forsk Technologies'
+s2 = s1.replace('Technologies','Coding School')
+
+print(s1) # Forsk Technologies
+
+print(s2) # Forsk Coding School
+
+
+
+
+Q21. If we have a str1 = "Forsk Jaipur"
+		print(str1[3:11])     
+output "sk Jaipu" I don't want space.So, Is this possible ?
+
+Answer :- Yes, We can remove those spaces from that string.
+
+str1 = "Forsk Jaipur"
+
+s1 = str1[3:11]  
+s2 = s1.split()
+
+s3 = ''.join(s2)  
+
+print(s3) # 'skJaipu'
+
+
+
+Q22. Why internally strings will not changed after performing some operations ?
+
+Answer :- We know that Strings are Immutable and we can perform some operations on strings but it will not
+changed at the actual strings. Internally strings are always will be the same as actual before perfroming any operations.
+
+Ex :-
+
+s1 = 'Forsk'
+s2 = s1.upper()
+
+print(s2) #  'FORSK'
+
+print(s1) # 'Forsk'
+
+NOTE :- Here s2 string will be just changed on console but it will not be changed 
+in the actual string like s1. s1 always remains the same. That's why we can called 
+strings are Immutable.
+
+Strings are Immutable Means :- It means we can some operation on strings but it will
+---------------------------  not be affected in actual strings.
+
+Ex :-
+
+str1 = 'FORSK CODING SCHOOL'
+s2 = str1.lower()
+
+print(s2) # 'forsk coding school'
+
+print(str1) # 'FORSK CODING SCHOOL'
+
+
+
+
+Q23. What are local variables and global variables in Python?
+Answer :-
+
+local variables:- 
+
+def m1(): # Method defining.
+    
+    x = 100 # Local variable
+    print(x) # 100
+    
+m1() # Method calling
+
+global variables :- 
+
+class Test:
+    x = 100 # This is global variable inside the class. It is like Class level variable also.
+    
+    def m1(self):
+        print('This is m1() method')
+        
+t = Test() # Object creation
+
+t.m1() # This is m1() method
+
+
+print('X value :', t.x) # X value : 100
+
+
+
+
+
+Q24. Strings are immutable then how it is replacable ,how it is work internally ?
+Answer :- We know that Strings are Immutable and we can perform some operations on strings but it will not
+changed at the actual strings. Internally strings are always will be the same as actual before perfroming any operations.
+
+Ex :-
+
+s1 = 'Forsk'
+s2 = s1.upper()
+
+print(s2) #  'FORSK'
+
+print(s1) # 'Forsk'
+
+NOTE :- Here s2 string will be just changed on console but it will not be changed 
+in the actual string like s1. s1 always remains the same. That's why we can called 
+strings are Immutable.
+
+Strings are Immutable Means :- It means we can some operation on strings but it will
+---------------------------  not be affected in actual strings.
+
+Ex :-
+
+str1 = 'FORSK CODING SCHOOL'
+s2 = str1.lower()
+
+print(s2) # 'forsk coding school'
+
+print(str1) # 'FORSK CODING SCHOOL'
+
+
+
+
+Q25. str1 = "INDIA"
+	str2 = "IS"
+	str3 = "BEST"
+print (str1,str2,str3)
+
+How we can make strings in a whole new string ?
+
+Answer :- 
+
+str1 = "INDIA"
+str2 = "IS"
+str3 = "BEST"
+
+print (str1,str2,str3)
+
+str4 = str1+str2+str3
+print(str4)
+
+
+
+
+Q26. How is it useful srtip() in python  ?
+
+
+s1 = '   INDIA IS BEST  ' # Space available in the first & last location .
+
+s2 = 'FORSK CODING SCHOOL    ' # Space available in the last location.
+
+s3 = s1+s2
+s4 = s3.strip()
+
+print(s4) # INDIA IS BEST  FORSK CODING SCHOOL
+
+
+
+
+Q27. To learn python which book we can prefer ?
+
+Answer :-  Here you can refer this website for Python.
+
+For Python :-
+https://www.w3schools.com/python/default.asp  
+
+
+
+
+Q28. Can we prefer w3 schools website for Python ?
+
+Answer :- Yes, You can refer w3schools website for Python and It contains more Interesting topics & Logics.
+
+
+
+
+Q29. What is the best platform to master numpy and pandas ?
+Answer :-
+
+Similar to NumPy, Pandas is one of the most widely used python libraries in data science. It provides high-performance, easy to use structures and data analysis tools.
+Unlike NumPy library which provides objects for multi-dimensional arrays, Pandas provides in-memory 2d table object called Dataframe
+
+
+NOTE :- Here are some website link pls through these below link.
+
+For Pandas :-
+https://www.ritchieng.com/pandas-introduction/ 
+
+ 
+For Numpy :-
+https://thispointer.com/python-numpy-create-a-ndarray-from-list-tuple-or-list-of-lists-using-numpy-array/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
