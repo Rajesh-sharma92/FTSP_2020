@@ -1,0 +1,462 @@
+﻿Q1. Can we use python for complex web application projects where lots of data and transections happens ?
+Answer :- 
+
+Python can be used to build server-side web applications. However, most Python developers write their web applications using a combination of Python and JavaScript. 
+Python is executed on the server side while JavaScript is downloaded to the client and run by the web browser.
+Web development using Python has been very popular for years – and for all the right reasons. 
+Not only is it a perfect language for beginners but it can also serve you as stepping stone for learning more complicated languages.
+Python is better in the long-term projects. PHP has a very low learning curve, and it is straightforward to get started with. 
+Python uses indentation enforcements that are quite strict. This makes it more readable than PHP.
+
+
+
+
+Q2. Can you please tell me the use of bool and complex Datatypes ?
+Answer :- 
+
+Here in the bool datatypes we will using the boolean values like
+True, False.
+
+Ex:-
+
+x =a 100
+y = 200
+
+if x == y:
+    print(True)
+else:
+    print(False)
+
+***** Result *****
+False
+
+x = 400
+y = 500
+
+if x < y:
+    print(True)
+else:
+    print(False)
+
+***** Result *****
+ True
+  
+NOTE :- In the complex data Types will be like.
+
+c = (ai+j)
+
+z = (xi+j)
+
+
+
+
+
+Q3. Why data types are having same size as we can see in variable explorer?
+Answer :- 
+
+Because it is due to store in a variable. 
+when we store a string or int variable in x then we can see that here we are 
+storing any variable in other variable so size always will be same.
+
+eg
+x = 5         #size will be 1
+x = "Rajesh"  #size will be 1
+
+Note:- here we are storing only one variable in x. 
+       so size will be same.
+       
+NOTE :- If we are storing the some values in the list then size will be different like.
+Ex :- list1 = [10,20,30,40] # Size will be 4.
+
+
+
+
+Q4. What will the size of float will be same as double as  far as precision is concerned ? 
+Answer :- In python we do not have double data type concept and we will be using 
+only float values. 
+Ex :- 
+
+a = 100.330 # size will be 1
+
+x = 20.5 # size will be 1
+
+
+
+Q5. How to take multiple input in a single statement / single line ?
+Answer :-
+
+x,y = input('Enter the values x :'),input('Enter the values y :')
+        
+       or
+       
+x = input("Enter the values: ").split()
+
+
+
+Q6. What is the use of main in python ?
+Answer :-
+
+The main function in Python acts as the point of execution for any program. Defining the main 
+function in Python programming is a necessity to start the execution of the program as it gets 
+executed only when the program is run directly and not executed when imported as a module.
+
+
+Q7. Will you be uploading all the recordings of all the days on YouTube ?
+Answer :- Yes, We will uploading all those recored videos on our youTube channel.
+
+Website :- 
+
+link :- https://www.youtube.com/channel/UC01oec_kXIqP__GAaSi7npQ
+
+
+Q8. Which is the free cloud platform is better for machine learning ?
+Answer :- Google Colab
+
+
+Q9. Can we use short forms of the assignment operator(like math as mt) and the function (like sqrt as st) in sake code ?
+Answer :- 
+
+import math as mt
+
+from math import sqrt as st
+
+mt.pow(2,4) # 16.0
+
+mt.pow(5,2) # 25.0
+
+st(4) # 2.0
+
+st(225) # 15.0
+
+
+
+Q10. Can you pls suggest me best site or video tutorial for django ?
+Answer :- There are so many videos on youtube as well as some related websites on google. Here we can't suggest
+you any specific sites.so, I request to all of you pls through once as per your understanding concept on Django.
+
+
+
+Q11. Could you please brief what practical learnings we will have in these 7 days ?
+Answer :- Here We need to write our total 7 days activities during STP / FTP online.
+
+
+
+Q12. from math import sqrt, in this we can only use sqrt function or we can use other function also ?
+Answer :-
+
+NOTE :- There is only one method to find the square root in python3  is that is sqrt() function 
+and which is available im  math library. So, we need to imort math anf then we can call this method.
+
+from math import sqrt 
+
+sqrt(16) #  4.0
+sqrt(3) # 1.7320508075688772
+sqrt(2) # 1.4142135623730951
+sqrt(1) # 1.0
+sqrt(0) # 0.0
+
+
+
+
+Q13. Python is good for web development or php ?
+Answer :- 
+
+Python is widely used in AI, data science, and scientific community whereas PHP is the language of choice for web development. 
+Python has a small number of frameworks whereas PHP has many frameworks. Python offers very clear and concise syntax of codes 
+whereas PHP has a wide range of naming conventions and syntax.
+
+PHP is a general-purpose web development language that is one of the most popular server-side scripting tools based on HTML. 
+This platform is quite fast and considered as the best option for building dynamic web pages.
+
+Python indeed is a favorite among application programmers as well as web developers (thanks to Django) owing to its strong emphasis on readability and efficiency. 
+And the biggest advantage with the language is that it is quite easy to learn.
+
+
+
+Q14. What is vector in python ?
+Answer :- 
+We can represent a vector in Python as a NumPy array. A NumPy array can be created from a list of numbers. 
+For example, below we define a vector with the length of 3 and the integer values 1, 2 and 3.
+
+from numpy import array 
+
+v1 = array([1, 2, 3]) 
+v2 = array([2.5,3.5,5.5])
+v3 = v2+v1
+
+print(v3) # [3.5 5.5 8.5]
+
+v3 = v2-v1
+
+print(v3) # [1.5 1.5 2.5]
+
+
+Q15. Can we directly type cast a variable like 
+	age=int(input("enter your age")) ?
+
+Answer :- Yes, Offcourse, we can directly type cast any variables in python as per our requirements.
+please check in the below examples.
+
+age=int(input("enter your age :")) # Indirectly - Type casting.
+if age > 60:
+    print('Senior Citizens') # Senior Citizens
+
+
+age = input('Enter your age :')
+
+age = int(age) # Directly - Type casting.
+
+if age < 21:
+    print('Teeneger Person') # Teeneger Person
+
+
+
+Q16. As far as ML is concerned, which language we must learn first, R Or python ?
+Answer :- 
+
+As we all know that, Python is very popular among other languages coz it is very easy to learn and as well as
+use and it is powerful compare to "R" language also. Python is very useful for machine Learning projects in industries 
+now a days. If we know Python very well then easily we may be compare between "Python & R " Languages.
+
+
+
+ 
+Q17. Which language should be prefer for getting a job? Like most of the people saying that Java is followed by every company but job in Python  not good for freshers. Why?
+Answer :- 
+
+As we all know that, Python is very popular among other languages coz it is very easy to learn and as well as
+use and it is powerful compare to "JAVA" language also. Python is very useful for machine Learning projects in industries 
+now a days. If we know Python very well then easily we may be compare between "Python & JAVA " Languages.
+Most of the companies, now a days they are giving most priority to Python knowing people in the job markets.
+
+
+
+
+
+Q18. Highest paying job after python ?
+
+Answer :- There are many jobs in the industries like.
+
+Cybersecurity Officer
+
+Cybersecurity Specialist	
+
+Entry-Level Developer	
+
+Java Scala Developer
+
+
+
+
+Q19. How to think about unique project related python ?
+Answer :- 
+
+Python is the most used programming language on the planet. Gaining Python knowledge will be your best investment in 2020. 
+So, if you want to achieve expertise in Python than it is crucial to work on some real-time Python project ideas.
+
+NOTE :- We just want to suggest you , first learn python and then decide about real time uniques projoects. 
+NOTE :- Python will be very powerful to develop some many projects.
+
+
+Q20. My programming language is Python, and have experience of Web Development Using HTML, css, js and jquery and I have also worked on Django and currently working on DSA for a good programmer. Then which all are fields we need to work ?
+Answer :- 
+
+
+Q21. What is data visualization ?
+Answer :- 
+
+Data visualization is the graphical representation of information and data. By using visual elements like charts, 
+graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, 
+and patterns in data.
+
+This is important because it allows trends and patterns to be more easily seen.
+That fact showcases the importance of data visualization.
+
+
+Q22. Which will be the best concept in Python for Database connectivity like Postgres  or MySQL ?
+Answer :- 
+
+To create a connection between the MySQL database and the python application, the connect() method of mysql.
+connector module is used. Pass the database details like HostName, username, and the database password in the method call. 
+The method returns the connection object.
+
+Connecting to a database with Python The most common libraries for relational databases are: 
+psycopg2 (source code) for PostgreSQL. 
+MySQLdb (source code) for MySQL. 
+Note that this driver's development is mostly frozen so evaluating alternative drivers is wise if 
+you are using MySQL as a backend.
+
+
+
+
+Q23. What basic knowledge is required to understand the python language ?
+Answer :- 
+
+There is no pre-requisite for learning Python. In fact, Python should be the first programming language to learn 
+if you are a newbie because it is one of the easiest languages and you don't have to memorize complex syntax. 
+Just look at the following code.
+
+Basic Data Types - Learn the five types: strings, tuples, lists, dictionaries, and integers.
+
+Operators - Python operators - basically, ways to do things.
+
+Flow Control - By using Boolean expressions, flow control, and loops, you'll learn how to code logic into your program.
+
+
+Q24. If I want to run my Django project in spyder, For this how can I open the terminal in spyder ?
+Answer :- Yes, easily you can run these below steps to run that Django projects.
+
+1) Install Python and pip.
+2) Install Django using pip: pip install django should do the trick.
+3) Setup a database.
+4) Setup your first django app django-admin.py startproject quickstart.
+
+
+
+Q25. Do we have char datatypes in python ?
+Answer :- No, we don't have any char data types in python.We have string data types in python.
+
+Python does not have a character or char type. All single characters are strings with length one.
+
+Ex :- 
+
+s = 'FORSK CODING SCHOOL'
+print(type(s))
+print(s)
+
+***** Output *********
+<class 'str'>
+FORSK CODING SCHOOL
+
+
+s1 = ''Forsk Technologies at Jaipur''
+print(type(s1))
+print(s1)
+
+***** Output *********
+<class 'str'>
+Forsk Technologies at Jaipur
+
+
+s2 = 'F'
+print(type(s2))
+print(s2)
+***** Output *********
+<class 'str'>
+F
+
+
+Q26. What will happens, If we define a string a without any quote ?
+Answer :- Here we will be getting an error if we don't defined any single/double/triple Quotes for strings.
+
+Ex :- 
+
+str1 = FORSK SCHOOL # Defined as string as without any quotes and it will through an error like 
+
+# str1 = FORSK SCHOOL
+                      ^
+# SyntaxError: invalid syntax
+
+NOTE :- Strings always in python we need to define inside of the Quotes like single/double/triple Quotes.
+
+
+
+Q27. Do we have the concept of "Type Casting” in Python ?
+Answer :- 
+
+Implicit Type Conversion is automatically performed by the Python interpreter. 
+Python avoids the loss of data in Implicit Type Conversion. 
+Explicit Type Conversion is also called Type Casting.
+The data types of object are converted using predefined function by user.
+
+Casting is when you convert a variable value from one type to another. This is, in Python, 
+done with functions such as int() or float() or str().
+
+Ex :- 
+
+x = 10 
+print(type(x)) # <class 'int'>
+print(x) # 10
+
+x = float(x)
+print(type(x)) # <class 'float'>
+print(x) # 10.0
+
+x = str(x) # '10.0'
+print(type(x)) # <class 'str'>
+print(x) # 10.0
+
+
+ 
+
+Q28. Which is the best IDE’s as per specific tasks to perform in python , ML and DL etc ?
+Answer :- As far we have seen there are so many IDE's to run the Python programs.
+
+NOTE :- We always must suggest to everyone to use till now the Anaconda Navigator(Spyder) is the best IDE's for python 
+Machine Learning , Deep Learning and etc.
+
+NOTE :- Spyder is the best for Data Visulazations , Data Analytics and etc.
+
+
+
+
+Q29. Can we convert string into integer if the string have digits ?
+Answer :- Here we can't convert strings into Integers wheather strings contains digits or not.
+If we try to convert into Integer than we will be getting any error like ValueError: invalid literal for int() with base 10: 'Forsk'.
+
+str1 = 'forsk12345' # String with digits.
+print(type(str1))
+print(str1)
+
+str2 = int(str1) # ValueError: invalid literal for int() with base 10: 'Forsk12345'
+
+
+str1 = 'FORSK' # String without digits
+print(type(str1))
+print(str1)
+
+str2 = int(str1) # ValueError: invalid literal for int() with base 10: 'FORSK'.
+
+
+
+
+Q30. IF I NEED  SQRT OF A VECTOR eg (4,25,225,16) IN A SINGLE STATEMENT THEN ?
+Answer :- As we can see that sqrt can gives the square root for the single values only in single line.
+
+But If we need sqrt of multiple values then we should this kind of below concept and It will be working perfectly.
+
+Ex1 :- 
+
+
+from math import sqrt
+
+s1 = sqrt(36)
+print(s1) # 6.0
+
+
+s1 = sqrt([4,16,25,36]) # Sqrt with multiple values in the single line. # TypeError: must be real number, not list.
+
+Ex2 :- 
+
+from math import sqrt
+array = [4,25,225,16]
+print(array)
+
+list2 = []
+
+for ele in array:
+    sq = sqrt(ele)
+    list2.append(sq)
+print(list2)
+    
+******** Output *******
+[2.0, 5.0, 15.0, 4.0]    
+
+
+
+
+
+
+
+
+
