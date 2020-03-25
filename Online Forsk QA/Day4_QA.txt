@@ -1,0 +1,679 @@
+﻿Q1. Is there any  data structures in python for storing different data types ?
+Answer :- 
+
+Data structures are which can hold some data together. In other words, they are used to store a collection of related data.
+There are four built-in data structures in Python - list, tuple, dictionary and set.
+
+list1 = [10,20,30,40]
+
+print(type(list1)) # <class 'list'>
+print(list1) # [10, 20, 30, 40]
+
+tuple1 = (100,101,102,103)
+
+print(type(tuple1)) # <class 'tuple'>
+print(tuple1) #  (100, 101, 102, 103)
+
+dict1 = {'Name':'Forsk Coding School' , 'Location':'Jaipur', 'Reg.No.': 1001}
+
+print(type(dict1)) # <class 'dict'>
+print(dict1) # {'Name': 'Forsk Coding School', 'Location': 'Jaipur', 'Reg.No.': 1001}
+
+set1 = {10,20,30,40,10,30,40,60}
+
+print(type(set1)) # <class 'set'>
+print(set1) # {40, 10, 20, 60, 30}
+
+
+
+
+Q2. Is there any way in python to randomly select items from a list or range as it is there a random function in C ?
+Answer :- Yes, We have some functions like choice(),choices(),sample(). 
+
+NOTE :- First we need to import the random module and then we can use the choice methos to get the random values from list.
+Ex :- 
+
+import random
+
+list1 = [10,20,30,40,50]
+
+print('The Random Number is :', random.choice(list1)) # 40 # 10
+
+str1 = ['FORSK','CODING','SCHOOL','JAIPUR']
+print('The Random String :', random.choice(str1)) # 'JAIPUR'
+
+# To get the multiple values from str1.
+print('The Multiple Random Strings are :', random.sample(str1,2)) # ['JAIPUR', 'FORSK']
+
+
+
+
+Q3. Are strings immutable in Python ?
+Answer :- Yes, Strings are Immutable in python that means we can't exactly make any changes into the actual strings.
+
+Ex :- 
+
+str1 = 'FORSK CODING SCHOOL'
+
+print(type(str1)) # <class 'str'>
+
+print(str1) # FORSK CODING SCHOOL
+
+str2 = str1.lower()
+
+print(str2) # forsk coding school
+
+print(str1) # FORSK CODING SCHOOL # There is NO Changes into Actual string(Str1).
+
+str3 = str1.replace('SCHOOL','JAIPUR')
+
+print(str3) # FORSK CODING JAIPUR
+
+print(str1) # FORSK CODING SCHOOL
+
+
+
+
+Q4. Is a list in Python is mutable ?
+Answer :- Yes, List is mutable in Python and that means we can perform any kind of operations on list data structures.
+
+Like : Adding new element, removing some elements from list etc.
+
+list1 = [10,20,30,40,50]
+print(type(list1))
+print(list1)
+list1.append(100)
+
+print(list1) # [10, 20, 30, 40, 50, 100]
+
+list1.remove(30)
+print(list1) # [10, 20, 40, 50, 100]
+
+list1.pop()
+print(list1) # [10, 20, 40, 50]
+
+list1.reverse()
+print(list1) # [50, 40, 20, 10]
+
+
+
+
+
+Q5. Can we show mobile number and name of the person with a same column with the help of list ?
+Answer :- Yes, We can show and here we will using the List comprehensions & Enumrate functions.
+
+[x**x for x in range(0,5)]
+
+[item for item in range(1,10) if item%2==0]
+
+list1 = ['forsk','coding','school','jaipur']
+for ele in list1:
+    print(ele)
+    
+for ele in enumerate(list1):
+    print(ele)
+    
+Ex :- 
+
+for num,ele in enumerate(list1 , start = 1001):
+    print(num,ele)
+
+******** Output **********
+
+1001 forsk
+1002 coding
+1003 school
+1004 jaipur
+
+
+
+Q6. Can we add more than one number using append ?
+Answer :- Yes, We can add but for single element and for multiple elements we need to use the list.
+
+list1 = [10,20,30,40]
+list1.append(50) # Single value added.
+print(list1) # [10, 20, 30, 40, 50] 
+
+list2 = [1,2,3,4]
+list1.append(list2) # Added the full list.
+print(list1) # [10, 20, 30, 40, 50, [1, 2, 3, 4]]
+
+list1.extend(list2) # Added the full list but good condition output.
+print(list1) # [10, 20, 30, 40, 50, 1, 2, 3, 4]
+
+
+
+
+Q7. Can we clear specific value from list using clear fuction ?
+Answer :- No, we can't clear any specific values from list and if try to clear then it will throw an error.
+
+list1 = [10,20,30,40,50]
+
+print(list1) # [10, 20, 30, 40, 50]
+
+list1.clear() # It clears the entire list and we can't clear any specific element.
+
+print(list1) # [] # empty list
+
+list1.remove(20)
+print(list1)
+
+list1.pop()
+print(list1) # [] # Pls execute this line number of times.
+
+
+
+
+Q8. What exactly extend method does ?
+Answer :- 
+
+Python list extend() is an inbuilt function that adds the specified list elements (or any iterable) to the end of the current list. 
+The extend() extends the list by adding all items of the list (passed as an argument) to an end
+
+
+str1 = ['FORSK CODING']
+str2 = ['SCHOOL JAIPUR']
+
+str1.extend(str2)
+print(str1) # ['FORSK CODING', 'SCHOOL JAIPUR']
+
+list1 = [10,20,30]
+list2 = [40,50]
+
+list1.extend(list2)
+print(list1) # [10, 20, 30, 40, 50]
+
+
+
+
+Q9. What happens, if I have duplicate items in the list ?
+Answer :- list is a data structure and which may be contains any kind of data likes int , float ,str like :
+Hetrogenius data types. List may contains duplicate values and  Nothing will be happening to the list if there is
+duplicate values in it.
+
+Ex :- 
+
+list1 = [10,20,30,20,20,50,20]
+
+print(type(list1)) # <class 'list'>
+
+print('The Total values are :', list1.count(20)) # The Total values are : 4
+
+print(list1) # [10, 20, 30, 20, 20, 50, 20]
+
+print(list1[0]) # 10
+
+print(list1[3]) # 20
+
+print(list1[-2]) # 50
+
+
+
+
+Q10. Is append method  does not overwrite ?
+Answer :- 
+
+NOTE :- Here we can see that the append() method which is not overwriting the existing values
+available in the list. It will just added the always new values at the end of the list 
+list size will be Increased that's all.
+
+
+list1 = [10,20,30,40]
+list1.append(40)
+
+print(list1) #  [10, 20, 30, 40, 40]
+
+list1.append(40)
+
+print(list1) # [10, 20, 30, 40, 40, 40]
+
+print('The Total value of Duplicate :', list1.count(40)) # The Total value of Duplicate : 3
+
+print('The Size of List :', len(list1)) # The Size of List : 6
+
+
+
+
+Q11. Can we remove multiple values from a list by using a single remove function ?
+Answer :- No, We can not.
+
+NOTE :- As we can see that in the below example, remove() method always takes only one Argument 
+and It will be removing that particular element from the list. 
+
+NOTE :- We can not remove the multiple values from a list by using single remove() method and if
+try then we will get an error like TypeError: remove() takes exactly one argument (2 given).
+
+NOTE :- We can remove multiple values from list by using the del keyword in python.
+
+
+list1 = [10,20,30,40,50]
+
+list1.remove(30)
+
+print(list1) # [10, 20, 40, 50]
+
+list1.remove(10,20) # It is not allowed. TypeError: remove() takes exactly one argument (2 given)
+
+
+del list1[1:3]
+print(list1) # [10, 40, 50]
+
+del list1[:-1]
+print(list1) # [50]
+
+del list1[2:]
+print(list1) # [10, 20]
+
+# Here you can give like this way also.
+del(list1[1:3])
+print(list1) # [10, 40, 50] 
+
+del list1 # Entire list will be deleted.
+print(list1)  # NameError: name 'list1' is not defined
+
+
+
+
+Q12. Can we use indexing in remove the element ?
+Answer :- 
+
+NOTE :- As we can see that in the below example, remove() method always takes only one Argument 
+and It will be removing that particular element from the list. 
+
+NOTE :- We can not remove the multiple values from a list by using single remove() method and if
+try then we will get an error like TypeError: remove() takes exactly one argument (2 given).
+
+NOTE :- We can remove multiple values from list by using the del keyword in python.
+
+
+
+list1 = [10,20,30,40,50]
+
+list1.remove(30)
+
+print(list1) # [10, 20, 40, 50]
+
+list1.remove([1:3]) # It is not allowed. 
+
+list1.remove[1:] # Not allowed.
+
+del list1[1:3]
+print(list1) # [10, 40, 50]
+
+
+
+
+
+Q13. WAP to remove all ‘Y’present in list1=['priya','ram','yiot' ].
+Answer :- Here we will be writing some logic of the program like.
+
+list2=[]
+list1=['priya','ram','yiot']
+for i in list1 :
+    if "y" in i:
+        z=i.replace("y","")  
+        list2.append(z)
+    else:
+        list2.append(i)
+print(list2)
+
+
+
+
+Q14. What should we do if we want to remove element from particular index in a list when there are duplicate element ?
+Answer :- 
+
+NOTE :- Here we can remove the specific values through any particular index.
+NOTE :- By default pop() method removes the values from the list at end point always.
+
+list1 = [10,20,30,50]
+
+list1.pop() # By dafult pop() method removes value from last.
+print(list1) # [10, 20, 30]
+
+
+list1 = [10,20,30,50]
+
+print(list1.index(20)) # 1
+list1.pop(1)
+print(list1) # [10, 30, 50]
+
+
+list1 = [10,20,30,40,20,50,60]
+
+list1.index(20) # 1 
+list1.pop(1)
+print(list1) # [10, 30, 40, 20, 50, 60]
+
+list1.index(20) # 3
+list1.pop(3)
+print(list1) # [10, 30, 40, 50, 60]
+
+
+Q15. How to remove duplicate elements from the list ?
+
+Answer :- 
+
+list1 = [1, 4, 5, 5, 5, 9, 1] 
+  
+# printing original list 
+print("The original list is : ", (list1)) 
+  
+# Duplicate element indices in list.
+list2 = []
+
+for item in list1:
+    if item not in list2:
+        list2.append(item)
+
+print(list2) # [1, 4, 5, 9]
+
+	
+
+
+Q17. What is the deep copy and shallow copy in python ?
+Answer :- 
+
+# Make a shallow copy.
+ 
+xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ys = list(xs)  # Make a shallow copy
+#This means ys will now be a new and independent object with the same contents as xs. 
+You can verify this by inspecting both objects:
+
+print(xs) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print(ys) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+xs.append(['sub-list'])
+
+print(xs) # [[1, 2, 3], [4, 5, 6], [7, 8, 9], ['sub-list']]
+
+xs[1][0] = 1001
+
+print(xs) # [[1, 2, 3], [1001, 5, 6], [7, 8, 9], ['sub-list']]
+
+# Making Shallow Copies.
+
+import copy
+
+xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+zs = copy.deepcopy(xs)
+
+# When you inspect xs and its clone zs that we created with copy.deepcopy(), 
+you’ll see that they both look identical again—just like in the previous example:
+
+print(xs) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print(zs) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+xs[1][2] = 6006 
+
+print(xs) # [[1, 2, 3], [4, 5, 6006], [7, 8, 9]]
+
+print(zs) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+
+
+
+
+Q18. Can we insert two elements at same time in list using insert() function ?
+Answer :- 
+
+list1 = [10,20,30,40]
+print(list1) # [10, 20, 30, 40]
+
+list1.insert(4,50)
+print(list1) # [10, 20, 30, 40, 50]
+
+list1.insert(0,101)
+print(list1) # [101, 10, 20, 30, 40, 50]
+
+
+list2 = [102,103,104,105]
+list1.extend(list2)
+print(list1)  # [101, 10, 20, 30, 40, 50, 102, 103, 104, 105]
+
+NOTE :- We can see that in the above example we just enter only element by using insert coz it 
+takes always two arguments like one is index no. and another is element value. 
+
+NOTE :- We can't pass the multiple arguments into the list by using the Insert() method.
+
+
+
+
+
+Q19. Is it possible to append element at starting of list ?
+Answer :- 
+
+list1 = [101,102,103,104]
+
+list1.append(105)
+print(list1) # [101, 102, 103, 104, 105]
+
+NOTE :- Here we can see that by using append() method we can added only one element that will
+be always added to at the end of the list.
+
+list1.insert(0,106)
+print(list1) # [106, 101, 102, 103, 104, 105]
+
+NOTE :- We can't added into list at starting position in the list.
+
+
+
+
+
+Q20. Can we use pop() method for index value ?
+Answer :- No, We can't use pop() method as index method in the list.It uses only for deleting any elements.
+
+list1 = [10,20,30,40,50]
+
+list1.pop() # Default always last value will be deleted from list.
+
+print(list1) # [10, 20, 30, 40]
+
+
+list1.pop(1)
+print(list1) # [10, 30, 40]
+
+list1.pop(-2)
+print(list1) # [10, 40]
+
+
+
+
+
+Q21. How to use del() function in python ?
+Answer :- 
+
+list1 = [10,20,30,40,50]
+
+#del(list1) 
+
+# print(list1) # NameError: name 'list1' is not defined
+
+
+del list1[2:]
+
+print(list1) # [10, 20]
+
+del list1[-3]
+print(list1) # [10, 20, 40, 50]
+
+del list1[1]
+print(list1) # [10, 30, 40, 50]
+
+
+
+
+Q22. Is it possible to get all the index values for duplicate items ?
+Answer :-
+
+list2=[]    
+list1=[10,20,30,10,40,50,10,60,10]
+for i in range(len(list1)) :
+     if list1[i]==10:
+         list2.append(i)
+if len(list2)>1:
+    print(list2[1:])
+else:
+    print('no duplicates ')
+    
+*********** Output *******
+
+[3, 6, 8]
+
+
+
+
+Q23. What is the difference between pop and remove ?
+Answer :- 
+
+pop() Method :-
+------------
+NOTE :- If we are not passing any elements index values in the pop() method then default 
+it will always deleted the element form at ending of the list always. like pop()
+
+NOTE :- We can pop out the specific element by using passing the index values like pop(index values). 
+
+list1 = [101,102,103,104,105]
+list1.pop()
+print(list1) # [101, 102, 103, 104]
+
+list1.index(102) # 1
+list1.pop(1)
+print(list1) # [101, 103, 104]
+
+remove() Method :- 
+----------------
+NOTE :- It is used to pass the element present in the list and which is not longer required at all.
+
+list1 = [101,102,103,104,105]
+list1.remove(102)
+print(list1) # [101, 103, 104, 105]
+
+list1.remove(105)
+print(list1) # [101, 103, 104]
+
+NOTE :- remove() method always takes which element we want to remove from the list and It doesn't 
+take any kind of index values.
+
+
+
+
+Q24. Is pop more efficient than using remove ?
+Answer :- 
+
+list1 = [10,20,30,40,50,60]
+
+for item in range(len(list1)):
+    
+    list1.pop()
+    
+print('The List Has Empty :', list1) 
+
+******** Output *******
+The List Has Empty : []
+
+
+list1 = [10,20,30,40,50,60]
+
+for item in list1:
+    print(item)
+    
+    
+    list1.remove(40)
+    print(list1) # [10, 20, 30, 50, 60]
+    
+
+ 
+
+Q25. For eg : str1 = "he is a hero then"
+find words starting with 'he' in str1 ?
+
+Answer :- 
+
+str1 = 'He is a Hero Then'
+str1 = str1.split(' ')
+
+list1 = []
+
+for x in str1:
+    if x  == 'He':
+        list1.append(x)
+        print(list1)
+    
+
+    
+
+Q26. What is the used of seed ?
+Answer :- 
+
+from random import randint
+from time import sleep
+
+print(randint(0,10))
+
+
+for i in range(randint(0,10)):
+    sleep(2)
+    print(i)
+print()    
+
+
+import random 
+from time import sleep
+
+print(random.randint(0,100)) # 60
+print(random.randint(0,100)) # 36
+
+# If we uses the seed() function then always we will getting the same output always.
+random.seed(60)
+print(random.randint(0,100)) # 39
+
+random.seed(36)
+print(random.randint(0,100)) # 42
+
+# If we are not seed() function then it will gives the Random Interger Values.
+
+print(random.randint(0,100)) # 60
+
+
+
+Q27. Explain the program of length of string ?
+Answer :- 
+
+NOTE :- We are checking size of the any strings or list then we should use the len() function
+and easily we can count the size.
+
+NOTE :- Single Space also will be counted as single characterwise.
+
+str1 = 'FORSK CODING SCHOOL , JAIPUR'
+
+print(len(str1)) # 28
+
+str2 = 'DATA SCIENCE COURSE TEACHING BY FORSK CODING SCHOOL'
+print(len(str2)) # 51
+
+list1 = [10,20,30,40,50]
+print(len(list1)) # 5
+
+str3 = 'Forsk        School'
+print(len(str3)) # 19
+
+# Here we just want to check the size of the string.
+str4 = 'Machine Learning teaching by Forsk People'
+
+for ch in str4:
+    pass
+print('The Total Size of String :', len(str4))
+
+********** Output ***********
+The Total Size of String : 41
+
+
+
+
+
+
