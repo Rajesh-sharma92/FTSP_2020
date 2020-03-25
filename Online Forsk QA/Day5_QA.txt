@@ -1,0 +1,410 @@
+﻿Q1. What is the difference between string and tuple ?
+Answer :- 
+
+str1 = 'FORSK CODING SCHOOL'
+print(type(str1)) # <class 'str'>
+print(str1) # FORSK CODING SCHOOL
+
+str2 = '10,20,30,40'
+print(type(str2)) # <class 'str'>
+print(str2) # '10,20,30,40'
+
+str3 = 'forsk coding school'
+str3 + ' jaipur' # 'forsk coding school jaipur'
+print(str3) # forsk coding school
+
+tuple1 = (10,20,30,40,50,10)
+
+tuple1.count(10) # 2
+
+tuple1.index(50) # 4
+
+t1 = (10,20,30)
+t2= (40,50)
+
+t3 = t1+t2
+print(t3) # (10, 20, 30, 40, 50)
+
+t1 = (10,20,30)
+
+t2 = t1+(100) # It is not valid coz we can't perfrom any of operation on the tuples.
+
+NOTE :- If we want declare any which must be constant in the real world that must be declared 
+as tuple in python like Bank Customer A/c No. which is unique for every customers.
+
+Mobile No's are Unique for every customers.
+
+NOTE :- Here we can see that both strings & tuples are Immutables that means what the operations 
+we will on it that won't be affetced into actual ones.
+
+
+
+
+Q2. Why tuple is faster than list ?
+Answer :- 
+
+Tuples are stored in a single block of memory. Tuples are immutalbe so, It doesn't require extraspace to store new objects.
+It is the reason creating a tuple is faster than List. It also explains the slight difference in indexing speed is faster than lists, 
+because in tuples for indexing it follows fewer pointers.
+
+
+
+Q3. Do we have 'const' keyword in python or not ?
+Answer :-
+
+No there is not. You cannot declare a variable or value as constant in Python.
+But you might want to have a look at the code snippet Constants in Python by Alex Martelli.
+ 
+
+
+
+Q4. If we write x,y = divmod(23,5) then what is the value of x & y ?
+Answer :- 
+
+NOTE :- divmod() method always takes 2 parameters like (x,y) and gives the values into 
+following forms like (x//y , x%y) 
+
+Ex :- 
+
+x,y = divmod(23,5)
+print('X value :', x) # X value : 4
+print('Y value :', y) # Y value : 3
+
+
+a,b = divmod(100,3)
+print('A value :', a) # A value : 33
+print('B value :', b) # B value : 1
+
+
+
+
+Q5. Can we print matrix through list comprehensions ?
+Answer :- 
+
+test =  [
+    [str(x*y).rjust(2) for y in range(1,x+1)]
+    for x in range(1,8)
+] 
+
+for t in test:
+    print (' '.join(t))
+    
+    
+********* Output ***********
+ 1
+ 2  4
+ 3  6  9
+ 4  8 12 16
+ 5 10 15 20 25
+ 6 12 18 24 30 36
+ 7 14 21 28 35 42 49    
+    
+
+
+Q6. Can we take 2 variables in list comprehensions ?
+Answer :- 
+
+You can do this with two for clauses in your list comprehension. The first iterates over the items in the list. 
+The second iterates over a single-item list containing the list derived from splitting the string 
+(which is needed so we can unpack this into three separate variables).
+
+Ex:- 
+
+inputs = ["1, foo, bar", "2, tom, jerry"]
+[[int(x), y.strip(), z.strip()] for s in inputs for (x, y, z) in [s.split(",")]]
+
+******* Output *******
+
+[[1, 'foo', 'bar'], [2, 'tom', 'jerry']]
+
+
+
+
+Q7. What is the difference b/w lambda and map ?
+Answer :- 
+
+Lambda :- 
+-------
+We use lambda functions when we require a nameless function for a short period of time. 
+In Python, we generally use it as an argument to a higher-order function (a function that 
+takes in other functions as arguments). Lambda functions are used along with built-in functions like filter() , map() etc.
+
+Syntax :-
+
+lambda arguments: expression
+
+doubles = lambda x : x*2
+print(doubles(5)) # 10
+
+Square = lambda x : x*x
+print(Square(5)) # 25
+
+map :-
+----
+map() function returns a map object(which is an iterator) of the results after applying the given function to each item 
+of a given iterable (list, tuple etc.) Parameters : fun : It is a function to which map passes each element of given 
+iterable. iter : It is a iterable which is to be mapped.
+
+Ex :- 
+
+def calculateSquare(n):
+  return n*n
+
+numbers = (1, 2, 3, 4)
+result = map(calculateSquare, numbers)
+print(result)
+
+# converting map object to set
+numbersSquare = set(result)
+print(numbersSquare)
+
+******** Output *******
+{16, 1, 4, 9}
+
+
+
+
+Q8. Which is better map or list comprehension ?
+Answer :- 
+
+Map VS List Comprehension. List comprehension is more concise and easier to read as compared to map. 
+List comprehension are used when a list of results is required as map only returns a map object and does not return any list. 
+Map is faster in case of calling an already defined function (as no lambda is required).
+
+
+
+Q9. How to use map if there are multiple parameters in the function to pass on ?
+Answer :- 
+
+def add(x, y):
+    return x + y
+
+add(10,20)
+
+# we want to apply map function for an array
+
+map(add, [1, 2, 3], 2)
+
+[add(x, 2) for x in [1, 2, 3]]
+
+
+a = [1, 2, 3]
+
+import functools
+map(functools.partial(add, y=2), a)
+
+import itertools
+map(add, a, itertools.repeat(2, len(a)))
+
+
+
+
+Q10. What is the diffrence b/w filter and map ?
+Answer :- 
+
+Map takes all objects in a list and allows you to apply a function to it whereas Filter takes 
+all objects in a list and runs that through a function to create a new list with all objects 
+that return True in that function.
+
+list(map(lambda x : x*2 , range(0,10)))
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+list(filter(lambda x : x%2==0 , range(0,10)))
+
+# [0, 2, 4, 6, 8]
+
+
+
+
+Q11. Can we change returntype of filter, can it return false value ?
+Answer :- 
+
+The bool() method in general takes only one parameter(here x), on which the standard truth testing procedure can be applied. 
+If no parameter is passed, then by default it returns False. So, passing a parameter is optional. 
+It can return one of the two values.
+
+# list of alphabets
+alphabets = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
+
+# function that filters vowels
+def filterVowels(alphabet):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+
+    if(alphabet in vowels):
+        return True
+    else:
+        return False
+
+filteredVowels = filter(filterVowels, alphabets)
+
+print('The filtered vowels are:')
+for vowel in filteredVowels:
+    print(vowel)
+    
+******* Output ******
+The filtered vowels are:
+a
+e
+i
+o   
+
+
+
+Q12. Can you please show how Filter and Map work on Strings also ?
+Answer :- 
+
+Filter characters from a string in Python using filter()
+filter() basically returned a list of characters from above string by filtered all occurrences of 's' & 'a'. 
+Then by using join() we joined the filtered list of characters to a single string.
+
+def isOfLengthFour(strObj):
+    if len(strObj) == 2:
+        return True
+    else:
+        return False
+
+
+Str1 = ['hi', 'this' , 'is', 'a', 'very', 'simple', 'string' , 'for', 'us']
+
+#Now let’s filter the contents of list and keep the strings with length 2 only using filter() i.e.
+
+
+filteredList = list(filter(isOfLengthFour , Str1))
+print('Filtered List : ', filteredList)
+
+********** Output ******
+Filtered List :  ['hi', 'is', 'us']
+
+
+
+
+Q13. Can we use the lambda function in true false case ?
+Answer :- 
+
+test = lambda x : True if (x > 10 and x < 20) else False
+ 
+# Check if given numbers are in range using lambda function.
+
+print(test(12)) # True
+
+print(test(3)) # False
+
+print(test(24)) # False
+
+
+
+
+Q14. Can we use lambda function for multiple arguments/parameters ?
+Answer :- 
+
+Lambda functions can accept zero or more arguments but only one expression. 
+The return value of the lambda function is the value that this expression is evaluated to.
+Actually, lambdas are only useful when you want to define a one-off function. 
+In other words, a function that will be used only once in your program
+
+Ex :-
+
+def f(x, y) : 
+    return x + y
+
+just without binding it to a name like f.
+
+Also how do you make it return multiple arguments?
+
+The same way like with a function. Preferably, you return a tuple:
+
+
+f(10,20)    
+
+lambda x, y : (x+y, x-y)
+
+
+
+
+Q15. Can we use lambda function without using filter ?
+Answer :-
+
+We can use Lambda function inside the filter() built-in function to find all the numbers divisible by 13 in the list. 
+In Python, anonymous function means that a function is without a name. 
+The filter() function in Python takes in a function and a list as arguments.
+
+Ex :-
+
+my_list = [12, 65, 54, 39, 102, 339, 221, 50, 70, ] 
+  
+# use anonymous function to filter and comparing  
+# if divisible or not 
+result = list(filter(lambda x: (x % 13 == 0), my_list))  
+  
+# printing the result 
+print(result)  
+
+*********** Output ********
+[65, 39, 221]
+
+    
+
+
+Q16. How to use reduce function in python ?
+Answer :-
+
+reduce() in Python :-
+------------------
+The reduce(fun,seq) function is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along. 
+This function is defined in “functools” module. Working : At first step, first two elements of sequence are picked and the result is obtained. 
+
+Ex :-
+
+# importing functools for reduce() 
+import functools 
+  
+# initializing list 
+lis = [ 1 , 3, 5, 6, 2, ] 
+  
+# using reduce to compute sum of list 
+print ("The sum of the list elements is : ",end="") 
+print (functools.reduce(lambda a,b : a+b,lis)) 
+  
+# using reduce to compute maximum element from list 
+print ("The maximum element of the list is : ",end="") 
+print (functools.reduce(lambda a,b : a if a > b else b,lis)) 
+
+
+************* Output ************
+
+The sum of the list elements is : 17
+The maximum element of the list is : 6 
+
+
+
+
+Q17. Explain about recursion with example in Python ?
+Answer :- 
+
+It is even possible for the function to call itself. These type of construct are termed as recursive functions. 
+Following is an example of recursive function to find the factorial of an integer. 
+Factorial of a number is the product of all the integers from 1 to that number.
+
+Ex :-
+
+# An example of a recursive function to
+# find the factorial of a number
+
+def calc_factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
+
+    if x == 1:
+        return 1
+    else:
+        return (x * calc_factorial(x-1))
+
+num = 4
+print("The factorial of", num, "is :", calc_factorial(num))		
+
+************* Output *************
+
+The factorial of 4 is : 24
+
+
+
