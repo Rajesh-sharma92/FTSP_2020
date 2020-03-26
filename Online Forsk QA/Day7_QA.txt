@@ -1,0 +1,254 @@
+﻿
+Q1. What is the file Handling concept ?
+
+Answer :- 
+
+Read Mode :-
+----------
+
+file = open('E:\Online Forsk QA\Test.txt','r') # Default mode of file is always 'r' mode Means Read only.
+# file = open('E:\Online Forsk QA\Test.txt') # Not given file mode means Default as 'r' mode only.
+
+file.read()
+# file.close() 
+
+******* Output******
+FORSK CODING SCHOOL 
+FORSK TECHNOLOGIES
+FORSK JAIPUR
+Forsk people teaches the following subjects like DS,ML and DL.
+"THANK YOU SO MUCH FORSK TEAM"'
+
+file.readline() # 'FORSK CODING SCHOOL'
+
+file.readline() # '"THANK YOU SO MUCH FORSK TEAM"'
+
+file.readlines()
+
+['FORSK TECHNOLOGIES\\n\n',
+ 'FORSK JAIPUR\\n\n',
+ 'Forsk people teaches the following subjects like DS,ML and DL.\\n\n',
+ '"THANK YOU SO MUCH FORSK TEAM"\\n\n',
+ '\n']
+
+Wriet Mode :- 
+----------
+file = open('E:\Online Forsk QA\Test.txt','w')
+file.write("WOW WHAT A GREAT TEAM THAT 'S FORSK TEAM ")
+# Successfully we have written the msg into Test.txt file.
+
+Append Mode :- 
+-----------
+file = open('E:\Online Forsk QA\Test.txt','a')
+file.write('Machine Learning & AI & DL')
+# Successfully we have written the msg into Test.txt file with existing data.
+
+
+
+
+
+Q2. What is the use of plt.show() in Data visulazations ?
+Answer :- 
+
+# Here first we need to import the matplotlib library.
+import matplotlib.pyplot as plt
+
+x = [2,4,6,8,10]
+y = [2,4,6,8,10]
+
+plt.scatter(x,y,color='Red')
+plt.plot(x,y,color='Blue')
+plt.xlabel('Time(x)')
+plt.ylabel('Price(y)')
+plt.title('Time-Price Graph')
+
+plt.show() # It is used for to display the graph on console after plotting it.
+
+
+
+Q3. What is the use of Line Ploting into graph ?
+Answer :- 
+
+A line plot is a graph that shows frequency of data along a number line. 
+It is best to use a line plot when comparing fewer than 25 numbers. 
+It is a quick, simple way to organize data.
+
+A line graph, also known as a line chart, is a type of chart used to visualize the value of something over time. 
+For example, a finance department may plot the change in the amount of cash the company has on hand over time. 
+The line graph consists of a horizontal x-axis and a vertical y-axis.
+
+# Here first we need to import the matplotlib library.
+import matplotlib.pyplot as plt
+
+x = [2,4,6,8,10]
+y = [2,4,6,8,10]
+
+plt.scatter(x,y,color='Red')
+plt.plot(x,y,color='Blue')
+plt.xlabel('Time(x)')
+plt.ylabel('Price(y)')
+plt.title('Time-Price Graph')
+
+plt.show() # It is used for to display the graph on console after plotting it.
+
+
+
+
+
+Q4. What is the use of different types charts into Data Analysis ?
+Answer :- 
+
+import matplotlib.pyplot as plt
+
+x = [10,20,30,40]
+labels = ['One','two','three','four']
+
+plt.bar(labels,x,color='Blue')
+plt.xlabel('Months-Details')
+plt.ylabel('Price-Details')
+plt.legend()
+
+plt.show()
+
+
+import matplotlib.pyplot as plt
+
+sizes = [70,5,5,20]
+labels = ['ML','DL','CS','DS']
+colors = ['blue','red']
+explode = (0,0,0,0)
+
+plt.pie(sizes , explode = explode , labels = labels , colors = colors , autopct = '%1.2f%%' , shadow = True , startangle = 270)
+plt.axis('equal')
+
+plt.xlabel('Months-Details')
+plt.ylabel('Price-Details')
+plt.legend()
+
+plt.show()
+
+
+
+
+Q5. What is the use of numpy Library and where it is used in the real time ?
+Answer :- 
+
+NumPy is the most basic yet a powerful package for scientific computing and data manipulation in Python. 
+It is an open source library available in Python. It helps as to do the mathematical and scientific operation 
+and used extensively in data science. It allows us to work with multi-dimensional arrays and matrices.
+
+NumPy is a package in Python used for Scientific Computing. NumPy package is used to perform different operations.
+ The ndarray (NumPy Array) is a multidimensional array used to store values of same datatype. 
+These arrays are indexed just like Sequences, starts with zero.
+
+Ex :- 
+
+import numpy as np
+
+array = np.arange(10)
+
+print(array) # [0 1 2 3 4 5 6 7 8 9]
+
+new_matrix = array.reshape(2,5)
+print(new_matrix)
+
+[[0 1 2 3 4]
+ [5 6 7 8 9]]
+
+print(new_matrix.size) # 10 
+
+print(new_matrix.ndim) # 2
+
+print(new_matrix.dtype) # int32
+
+
+
+
+Q6. How to use pandas unique count function ?
+Answer :- 
+
+import pandas as pd
+
+dataset = pd.Series([10,20,30,10,30,40,50])
+
+print(dataset)
+****************
+0    10
+1    20
+2    30
+3    10
+4    30
+5    40
+6    50
+dtype: int64
+
+dataset.values
+****************
+array([10, 20, 30, 10, 30, 40, 50], dtype=int64)
+
+dataset.value_counts
+*********************
+1    20
+2    30
+3    10
+4    30
+5    40
+6    50
+dtype: int64
+
+dataset.unique()
+***********************
+array([10, 20, 30, 40, 50], dtype=int64)
+
+
+
+
+Q7. How to create Histogram ?
+
+Answer :- 
+
+Draw a histogram of the salaries divided into bin starting 
+   from 50K and increment of 15K.
+   
+   
+import pandas as pd
+df = pd.read_csv('E:\PYTHON CODE Challenges\Pandas\Salaries.csv')
+
+import matplotlib.pyplot as plt
+
+plt.hist(df['salary'] , bins = range(50000 , 210000 , 15000) , color='Royalblue')
+
+#plt.axis([45000,210000,0,20])
+plt.xlabel('No. of Salaries')
+plt.ylabel('No.of Employees')
+plt.title('Salaries Details')
+
+plt.savefig('E:\Forsk Pandas\Hist_sal.jpg')
+plt.show()
+
+
+
+
+
+
+Q8. Which male and female professor has the highest and lowest salary ?
+
+Answer :- 
+
+# 1. Which Male and Female Professor has the highest and the lowest salaries.
+
+import pandas as pd
+
+df = pd.read_csv('E:/PYTHON CODE Challenges/Pandas/Salaries.csv') # Reading a csv file into data frame.
+
+df.info()
+
+df_max_f = df[(df['sex']) & (df['rank']=='Prof')][['salary']].max()
+df_min_f = df[(df['sex']=='Female') & (df['rank']=='Prof')][['salary']].min()
+df_max_m = df[(df['sex']=='Male') & (df['rank']=='Prof')][['salary']].max()
+df_min_m = df[(df['sex']=='Male') & (df['rank']=='Prof')][['salary']].min()
+
+
+
+
+
