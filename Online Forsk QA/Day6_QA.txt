@@ -1,0 +1,471 @@
+﻿Q1. Is it imp to typecast a list to get a set aren't we define a separate set without using list ?
+Answer :- 
+
+set1 = {10,20,30,40,50,10,20,90,99}
+
+list1 = list(set1)
+
+print(list1)
+
+list1[3] # 50
+
+List1 = [10,20,30,40,50,10,20,90,99]
+
+set1 = set(List1)
+print(set1) # {99, 40, 10, 50, 20, 90, 30}
+
+
+t1=(10,20,10,20,30,40,50,40)
+s1 = set(t1)
+
+s1 = {10,20,30,40,20,30,50}
+s2 = set(s1)
+print(s2)
+
+list1 = list(s2)
+print(list1) # [50, 20, 40, 10, 30]
+
+
+
+
+
+
+Q2. How to use intersection in python ?
+Answer :- 
+
+NOTE :- In this concept we have to find the common values between 2 sets.
+NOTE :- set will not contains any kind of duplicates values.
+
+list1 = [10,20,30,40,50,30,101,10]
+list2 = [20,30,40,60,99,100]
+
+s1 = set(list1)
+s2 = set(list2)
+
+print(s1) # {101, 40, 10, 50, 20, 30}
+print(s2) # {99, 100, 40, 20, 60, 30}
+
+s1.intersection(s2) # {20, 30, 40}
+
+
+list1 = ['forsk','coding','school','jaipur','Rajasthan','jaipur']
+list2 = ['India','jaipur','forsk','coding','Pinkcity','coding']
+
+
+s1 = set(list1)
+s2 = set(list2)
+
+print(s1) # {'forsk', 'coding', 'Rajasthan', 'school', 'jaipur'}
+print(s2) # {'Pinkcity', 'forsk', 'India', 'coding', 'jaipur'}
+
+s1.intersection(s2) # {'coding', 'forsk', 'jaipur'}
+
+
+
+
+
+
+Q3. Can we use diffrent datatypes in the set at a time ?
+    Like s1 = {1,"aman",3.5,True}
+
+Answer :- Yes, We can use any kind of data types inside the sets and It will be removed any kind of duplicates
+values and always gives the Uniques values in the result.
+
+s1 = {1,"aman",3.5,True,False,-404,501,0,0.1250}
+l1 = list(s1)
+print(l1)
+
+********** Output **********
+
+[False, 1, 0.125, 3.5, -404, 'aman', 501]
+
+
+
+s1 = {True,False,True,False,False,False,True}
+
+print(s1) # {False, True}
+
+s1 = {1,0,True,False,0,False,True}
+
+print(s1) # {0, 1}
+
+
+
+
+Q4. Do we have indexing concept into set data structures ?
+Answer :- 
+
+Unlike List and tuples , Set does NOT support indexes or positions of it's elements. 
+Set supports Generics and we should use it whenever possible. Using Generics with Set will avoid ClassCastException at runtime. 
+We can use Set interface implementations to maintain unique elements.
+
+Ex :- 
+
+list1 = [10,20,30,40,50]
+
+print(type(list1)) # <class 'list'>
+print(list1[2]) # 30
+
+tuple1 = (10,20,30,40,50)
+print(type(tuple1)) # <class 'tuple'>
+print(tuple1[3]) # 40
+
+set1 = {10,20,30,40,50}
+print(type(set1))
+
+print(set1[2]) # TypeError: 'set' object is not subscriptable
+
+NOTE :- Indexing is not allowed into set data structures coz order is not available in the sets.
+
+
+
+
+
+Q5.What is the use of set as we have list in python ?
+Answer :- The Python sets are highly useful to efficiently remove duplicate values from a collection 
+like a list and to perform common math operations like unions and intersections.
+
+Ex :- 
+
+l1 = [10,20,30,40,30,10]
+l2 = [10,20,40,50,60]
+
+s1 = set(l1)
+s2 = set(l2)
+
+s1.intersection(s2) # {10, 20, 40}
+
+s1.union(s2) # {10, 20, 30, 40, 50, 60}
+
+
+
+
+Q6. How to access elements from set in python ?
+Answer :- 
+
+A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets.
+Ex :- 
+
+s1 = {10,20,30,40}
+
+print(s1) # {40, 10, 20, 30}
+
+
+s1 = {10,20,30,40}
+for ele in s1:
+    print(ele)
+
+**** Output ****
+40
+10
+20
+30    
+
+
+s1 = {10,20,30,40,'FORSK','Jaipur',-404}
+print('FORSK' in s1) # True 
+
+
+s1 = {10,20,30,40,'FORSK','Jaipur',-404}
+for ele in s1:
+    if ele == 'FORSK':
+        
+        print(ele) # FORSK
+
+
+
+
+Q7. Will 2 and 2.0 be treated as different values in set ?
+Answer :- 
+
+s1 = {10,20,1,2,3,2.0,3.0}
+
+print(s1) # {1, 2, 3, 10, 20}
+
+
+s2 = {10.0,20.0,30.0,1,2,3,10,30}
+
+print(s2) # {1, 2, 3, 10.0, 20.0, 30.0}
+
+NOTE :- We can see in the above 2 examples there is No difference b/w 2 & 2.0.
+Both are behavioring the same but in the result it may considering any one but not two.
+
+NOTE :- Sets are not having any kind of duplicates values in it.
+
+
+
+
+
+
+Q8. Does set and dictionary are same having concept ?
+Answer :- 
+
+This reference object is called the “key,” while the data is the “value.” 
+Dictionaries and sets are almost identical, except that sets do not actually contain values: 
+a set is simply a collection of unique keys. As the name implies, sets are very useful for doing set operations.
+
+Ex :- 
+
+def find_phonenumber(phonebook, name):
+    for n, p in phonebook:
+        if n == name:
+            return p
+    return None
+
+phonebook = [
+    ("John Doe", "555-555-5555"),
+    ("Albert Einstein", "212-555-5555"),
+]
+print("John Doe's phone number is", find_phonenumber(phonebook, "John Doe"))
+
+********** OutOut **********
+John Doe's phone number is 555-555-5555
+
+
+
+Q9. Can we assign more than one value to a single key ?
+Answer :- 
+
+Technically it is not possible to store more than one 'value' per key. 
+However, as other answers have already discussed, there is nothing stopping 
+you from storing an array or tuple of objects to one key.
+
+The values in a dictionary can be any type. The keys can be any immutable type. 
+You cannot use a list as a key because a list is mutable. Similarly, you cannot 
+use a tuple as a key if any of its elements are lists.
+
+Ex :- 
+
+dict1 = {'Name':'Forsk' , 'Location':'Jaipur'}
+
+dict1['Name'] # 'Forsk'
+
+dict1['Location'] # 'Jaipur'
+
+
+
+dict2 = {'Name': ['Forsk','coding','school'] , 'Location': ('Jaipur','India') }
+
+dict2['Name'] # ['Forsk', 'coding', 'school']
+
+dict2['Name'][1] # 'coding'
+
+dict2['Location'][0] #'Jaipur'
+
+NOTE :- If we declare the same key in dictionary in python then the latest one will be consider always and previous one
+scope will be not allowed and you can see in the below program.
+
+
+dict2 = {'Name': ['Forsk','coding','school'] , 'Name': ('Jaipur','India') } # Duplicate Key in dict2.
+
+dict2['Name'][1] # 'India'
+
+
+
+
+
+Q10. Can we use set or tuple or list to assist more than one value for a key in dictionary ?
+Answer :- Yes, Offcourse we can do it.
+
+dict2 = {'Name': ['Forsk','coding','school'] , 'Location': ('Jaipur','India') , 'Courses' : {'ML','DL','DS'}}
+
+dict2['Name'] # ['Forsk', 'coding', 'school']
+
+dict2['Name'][1] # 'coding'
+
+dict2['Location'][0] #'Jaipur'
+
+dict2['Courses'] # {'DL', 'DS', 'ML'}
+
+dict2['Courses'][2] # TypeError: 'set' object is not subscriptable : Order is not in the sets.
+
+
+
+
+Q11. Can we modified the key in the dictionary ?
+Answer :- 
+
+dict1 = {'Name':'Forsk' , 'Location':'Jaipur'}
+
+dict1['Name'] # 'Forsk'
+
+dict1['Location'] # 'Jaipur'
+
+dict1['Name'] = 'Forsk coding school'
+
+dict1['Name'] # 'Forsk coding school' NOTE :- We have replaced with new value for key.
+
+dict1['Name'] = dict1['Coaching_Name'] # KeyError : 'Coaching_Name'
+
+NOTE :- We can not change the old key with new key coz key is unique in the dictionary once 
+it is initaliased in it.
+
+
+Q12. Can we make key as an integer like id ?
+Answer :- Yes, We can make the Key as Integer in dictionary and see the below examples for your references.
+
+Ex :-
+
+dict1 = { 1234 :'Forsk' , 5678:'Jaipur'}
+
+dict1[1234] # 'Forsk'
+
+dict1[5678] # 'Jaipur'
+
+
+dict1 = { 1: [10,20,30,40] , 2 : (50,60,70,80) }
+
+dict1[1] # [10, 20, 30, 40]
+
+dict1[1][2] # [10, 20, 30, 40]
+
+dict1[2] # (50, 60, 70, 80)
+
+dict1[2][0] # 50
+
+
+
+
+Q13. Can assign a separate list and then add into a set ?
+Answer :- 
+
+list1 = [10,20,30,40,50]
+
+set1 = {70,99,101}
+
+
+res = (list1 + set1) 
+
+NOTE :- Here we can add the list & set each other on basics of doing some Type casting into them.
+
+Case - 1 :- 
+--------
+
+list1 = set(list1)
+print(type(list1)) # <class 'set'>
+
+list1.union(set1) # {10, 20, 30, 40, 50, 70, 99, 101}
+
+Case - 2 :- 
+--------
+
+set1 = list(set1)
+print(type(set1)) # <class 'list'>
+
+list1.union(set1) # {10, 20, 30, 40, 50, 70, 99, 101}
+
+
+
+
+Q14. Can we  use append() method  in dictionary ?
+Answer :- 
+
+Courses = {'Course_ID' : 101 , 'Course_Name' : 'Machine Learning'}
+
+Courses['Course_ID'] # 101
+
+Courses['Course_Name'] # 'Machine Learning'
+
+Courses.keys() # dict_keys(['Course_ID', 'Course_Name'])
+
+Courses.values() # dict_values([101, 'Machine Learning'])
+
+Courses.get('Course_ID') # 101
+
+Courses.items() # dict_items([('Course_ID', 101), ('Course_Name', 'Machine Learning')])
+
+Courses['Course_ID'] = 1008
+
+Courses['Course_ID'] # 1008
+
+Courses.append() # AttributeError: 'dict' object has no attribute 'append'
+
+NOTE :- In the dictionary we do not have append() method to add some of new values.
+
+
+
+
+Q15. How will we make empty dictionary ?
+Answer :- 
+
+An empty dictionary is a dictionary that contains no items (no key:value pairs). 
+You may create an empty dictionary if you want a user to populate the dictionary. 
+For example, you create an empty dictionary and then receive input from a user and 
+then populate the dictionary based on the user input.
+
+Ex :- 
+
+dict1 = {} # Empty Dictionary.
+
+print(type(dict1)) # <class 'dict'>
+
+print(dict1) # {}
+
+Ex :- 
+
+new_dict = dict() # Creating an Empty Dictionary.
+
+print(type(new_dict)) # <class 'dict'>
+
+print(new_dict) # {}
+
+ """ OR """
+ 
+
+new_dict = {}
+
+print(type(new_dict)) # <class 'dict'>
+
+print(new_dict) # {}
+
+
+
+
+
+
+Q16. Can we search duplicate name or value in dictionary ?
+
+Answer :- Yes, We can use it duplicates values but not keys. 
+
+Keys are always unique in dictionary in python.
+
+
+dict1 = {'ID_No' : [ 101,102,103,104,101,100,110,103,109] }
+
+for key,value in dict1.items():
+    print(key,value)
+    
+********* Output *********
+ID_No [101, 102, 103, 104, 101, 100, 110, 103, 109]
+
+
+dict1 = {'a':1, 'b':2, 'c':3, 'd':2} 
+  
+print('The Dictionary :', str(dict1)) 
+
+#print(dict1)  
+
+
+new_dict = {} 
+  
+for key, value in dict1.items(): 
+    new_dict.setdefault(value,set()).add(key)
+
+
+      
+result = [key for key, values in new_dict.items() if len(values) > 1] 
+  
+# printing result 
+print("duplicate values", str(result))     
+    
+************ Output **********
+
+The Dictionary : {'a': 1, 'b': 2, 'c': 3, 'd': 2}
+duplicate values [2]
+
+   
+
+
+
+
+
