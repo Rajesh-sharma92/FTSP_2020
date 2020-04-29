@@ -160,6 +160,18 @@ The Mode of List : ModeResult(mode=array([30]), count=array([4]))
 
 
 
+Ex :- If we have 6 elements into the list.
+
+list1 = [10,20,30,40,50,60,70,30,99,30,101,30,30,201,30]
+
+from scipy import stats
+
+x = stats.mode(list1)
+
+print('The Mode of List :', x)
+------- Result ---------
+The Mode of List : ModeResult(mode=array([30]), count=array([6]))
+
 
 
 
