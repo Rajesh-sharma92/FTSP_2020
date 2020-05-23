@@ -141,8 +141,69 @@ df.loc[ df['duration'] >= 200 , 'genre'].head(10)
 Name: genre, dtype: object
 
 
- 
- 
+
+'''  Applying multiple filter criter to a pandas DataFrame '''
+
+
+import pandas as pd
+
+url = 'http://bit.ly/imdbratings'
+
+# Create movies DataFrame
+df = pd.read_csv(url)
+
+df.head()
+
+df[ df['duration'] >= 200 ].head() # It will work 
+
+df[ df['genre'] == 'Drama' ].head() # It will work 
+
+# If we want the Condition like Print the Movies details that are 
+# 200 mins more & should me Drama types.
+
+# AND Condition Means Both should be Correct.
+# AND = & 
+
+df[(df['duration'] >= 200) & (df['genre'] == 'Drama')].head()
+
+
+# OR Condition Means one should be Correct both of them.
+# OR = |
+
+df[(df['duration'] >= 200) |  (df['genre'] == 'Drama')].head()
+
+
+Q.1. What if you want genres crime, drama, and action ?
+Answer :- 
+
+# Slow Method
+df[ (df['genre'] == 'Crime') | (df['genre'] == 'Drama') |(df['genre'] == 'Action') ]
+
+
+# Fast Method
+
+film_list = ['Crime','Drama','Action']
+
+df_film = df[df['genre'].isin(film_list)]
+
+df_film.count()['genre'] # 538
+
+
+# Fast Method
+
+time_list = ['duration','star_rating']
+
+
+df[time_list].head()
+------------
+  duration  star_rating
+0       142          9.3
+1       175          9.2
+2       200          9.1
+3       152          9.0
+4       154          8.9
+
+
 
 
 
