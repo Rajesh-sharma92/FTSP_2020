@@ -157,5 +157,13 @@ for index,qty in df['quantity'].items():
 df.count()['quantity'] # 4622
 
 
+------------------------------------------------------------------
+
+list1 = [10,20,30,40,50,'Rajesh','forsk']
+
+for i in list1:
+    print(i)
+
+
 
 
