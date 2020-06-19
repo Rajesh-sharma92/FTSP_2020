@@ -42,5 +42,13 @@ while i <=5: # Outer While Loop
     print()
     
 
+
+
+
+i = 10
+while i <=20:
+    print('Hello world')
+    i = i + 1
+    
     
     
