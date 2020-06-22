@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block code %}
+
+<h3> Pls eneter Credit Card No. </h3>
+<p> Pls enter 16 digits Credit Card (The number may have digits in group of 4 have seperated by  one hyphen- "-").</p><br>
+<form action="{{ url_for('output')}}" method="post">
+  <input type="text" name="card" placeholder="Enter Card No"> <br><br>
+  <input type="submit" name="sub" value="send">
+</form>
+
+{% endblock %}
