@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block code %}
+
+<h3> Please Enter Your Mobile Number </h3>
+<p> Please Enter the 10 Digits Mobile Number to check the status </p><br>
+<form action="{{ url_for('output')}}" method="post">
+  <input type="text" name="Mobile" placeholder="Enter Mobile Number"> <br><br>
+  <input type="submit" name="sub" value="submit">
+</form>
+
+{% endblock %}
