@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Data</title>
+  </head>
+  <body>
+    <h1>Please Insert Data</h1>
+    <form class="" action="{{ url_for('get_form') }}" method="post">
+      <input type="text" name="name" placeholder="Enter your Name"><br><br>
+      <input type="text" name="age" placeholder="Enter your age"><br><br>
+      <input type="submit" name="send" value="Submit">
+</form>
+
+  </body>
+</html>
