@@ -1,0 +1,11 @@
+{% extends "fixed.html" %}
+
+{% block code %}
+<h1>Please Insert Data</h1>
+<form class="" action="{{ url_for('get_form') }}" method="post">
+  <input tympe="text" name="name" placeholder="Enter your Name"><br><br>
+  <input type="text" name="age" placeholder="Enter your age"><br><br><br><br>
+  <input type="submit" name="send" value="Submit"><br><br>
+</form>
+
+{% endblock %}
