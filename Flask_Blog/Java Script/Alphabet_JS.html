@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Java Script Lab</title>
+</head>
+
+<body>
+  <script>
+    var first
+    var name
+    first = name = prompt('Enter new Name, or OK to end !!')
+    while(name!="" && name!=null)
+    {
+      if(name < first)
+      first = name
+      name = prompt('Enter new Name, or OK to end !!')
+    }
+
+    document.write("The First Alphabetically = " + first)
+
+  </script>
+</body>
+</html>
