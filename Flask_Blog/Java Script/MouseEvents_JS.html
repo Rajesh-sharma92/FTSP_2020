@@ -1,0 +1,33 @@
+<html>
+<head> !! We are performing differnt kinds of Mouse Events !! </head>
+
+<title>Mouse Events</title>
+
+<body bgcolor="cyan">
+  <p style = "color:pink">This is simple & Easiest paragraph details </p>
+  <h1 style="color:Red"> This Example uses the addEventListener() method to add Many Events
+    on the document. </h1>
+    <h1 id = "demo" , style='color:blue'></h1>
+<script>
+document.addEventListener("mouseover" , myFunction)
+document.addEventListener("click" , mySecondFunction)
+document.addEventListener("mouseout" , myThirdFunction)
+
+function myFunction()
+{
+  document.getElementById("demo").innerHTML += "Moused_Over !!<br><br>"
+}
+
+function mySecondFunction()
+{
+  document.getElementById("demo").innerHTML += "Moused_Clicked !!<br><br>"
+}
+
+function myThirdFunction()
+{
+  document.getElementById("demo").innerHTML += "Moused_Out !!<br><br>"
+}
+
+</script>
+</body>
+</html>
