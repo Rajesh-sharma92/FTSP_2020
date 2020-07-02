@@ -10,8 +10,11 @@ def hello():
 def boot():
     return render_template("bootstrap.html")
 
+@app.route("/bootstrap")
+def bootstrap():
+    return render_template("bootstrap1.html")    
+
 
 app.run(debug=True)
-
 
 
