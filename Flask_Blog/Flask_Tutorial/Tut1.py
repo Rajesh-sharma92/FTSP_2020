@@ -1,3 +1,4 @@
+
 from flask import Flask , render_template
 
 
@@ -14,6 +15,7 @@ def hello():
 def Rajesh():
     name = "Rajesh sharma"
     return render_template("about.html" , name=name)
+
 
 
 
