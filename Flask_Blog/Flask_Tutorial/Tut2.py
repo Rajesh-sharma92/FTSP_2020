@@ -1,7 +1,9 @@
+
 from flask import Flask , render_template
 
 
 app = Flask(__name__)
+
 
 
 @app.route("/index")
@@ -17,6 +19,8 @@ def boot():
 @app.route("/bootstrap")
 def bootstrap():
     return render_template("bootstrap1.html")    
+
+
 
 
 
