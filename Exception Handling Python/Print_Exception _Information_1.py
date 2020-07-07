@@ -4,6 +4,7 @@ Created on Mon Mar  9 00:17:50 2020
 
 @author: Rajesh
 """
+
 Default except Block :-
 --------------------
 NOTE :- We can use default except block to handle any kind of exceptions.
@@ -25,7 +26,9 @@ except ZeroDivisionError:
 except: # Default Except Block
     print('Default Except Block : please provide only Integer values')
 
+
 ************* Result *************
+
 Enter first number :10
 
 Enter second number :2
