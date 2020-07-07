@@ -58,8 +58,10 @@ print('!!! Hello Froends !!!')
 print(10/0)
 print('Forsk school') # We will not get this line result coz in the above line exception is there and It will not exexcuted further.
 
+
 ******** Result **************
 !!! Hello Froends !!!
+
 
 print(10/0)
 ZeroDivisionError: division by zero
