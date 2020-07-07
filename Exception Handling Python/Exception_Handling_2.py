@@ -4,6 +4,7 @@ Created on Sun Mar  8 14:07:48 2020
 
 @author: Rajesh
 """
+
 NOTE :- Every exception in python is a class.
 
 NOTE :- All exception classess are child classes of BaseException either directly
@@ -21,7 +22,9 @@ print('stmt1') ---> Open DB connection.
 print(10/0) # Read the data from here.
 print('stmt3') ---> Close DB connection.
 
+
 ************* Result **************
+
 stmt1 
 ZeroDivisionError 
 Abnormal termmination 
