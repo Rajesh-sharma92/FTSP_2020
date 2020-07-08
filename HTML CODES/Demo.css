@@ -1,0 +1,15 @@
+div
+{
+  color : red;
+  background: cyan;
+}
+
+span
+{
+  color: blue;
+  background: yellow
+}
+
+
+NOTE :- div & span tags are made for CSS means for Styling purpose and If u r not
+going to use it and No need to use the div & span tags in ur cides.
