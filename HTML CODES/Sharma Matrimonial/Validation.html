@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Password Validation Page</title>
+  </head>
+  <body bgcolor="cyan">
+    <h1 style="color:brown"> !!! Here We will be checking the Password Validation Criteria & Requirements !!!</h1><br><br>
+    <form action="Thanks.html">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="username" value="" placeholder="Enter Username" required><br><br>
+
+      <label for="password">Password</label>
+      <!-- <input id="password" type="text" name="password" value="" placeholder="Enter Password"  pattern=".[0-9]{5,10}" title="!! min 5 & max 10 digits are allowed !!" required><br><br>-->
+      <input id="password" type="text" name="password" value="" placeholder="Enter Password"  pattern=".[0-9a-zA-Z@#-]{5,10}" title="!! min 5 & max 10 digits are allowed !!" required><br><br>
+      <input type="submit" value="Login Now">
+
+    </form>
+
+
+  </body>
+</html>
