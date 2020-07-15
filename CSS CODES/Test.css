@@ -1,0 +1,40 @@
+h1{
+  color:rgb(132, 245, 66);
+}
+
+p{
+  background: red;
+  color:White;
+  border-color: green;
+  border-style: groove;
+  border-width: 10px;
+
+<!-- border: 20px blue groove; -->
+
+}
+
+h2{
+  color:green;
+}
+
+ul{
+  color:rgba(255, 200, 123 , 0.5);
+}
+
+h3{
+  color:#e82f0e;
+}
+
+body{
+  background:url(https://images.unsplash.com/photo-1594060116816-c5a149503acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#first{
+  color : yellow;
+
+}
+.firstc{
+  color:red;
+}
