@@ -29,3 +29,62 @@ Ex :-
 .classname{
   color:red;
 }
+
+<!--   +++++++ ------------------------------------------------------------------ +++++   -->
+
+2) Advanced CSS Selectors :-
+-------------------------------
+i) * Selectors
+ii) Descendent Selectors
+iii) Adjecent Selectors
+iv) Attribute Selectors
+v) nth Type of Selectors
+
+i) * Selectors :-  * Selectors , It means Everything.
+Ex :-
+*{
+  color : blue;
+}
+
+ii) Descendent Selectors :- It means Child tags. Here every "li" tag is perent & every "a" tag is Child Tags only.
+Ex :- Here we shoud use the " space " symbol.
+li a{
+  color:orange;
+}
+
+ul li a{
+  color:orange;
+}
+
+iii) Adjecent Selectors :- It means side by side. Here we shoud use " + " symbol.
+Ex :-
+a+ul {
+  color:red;
+  background: yellow;
+}
+
+iv) Attribute Selectors :- Like 'a' anchor tag is called Attribute kind of Tags.
+Ex :-
+<a href="https://www.Facebook.com">Facebook.com</a>
+
+a[href]{
+  color:red;
+}
+Ex :-
+input[type="password"]{
+  background:red;
+}
+
+v) nth Type of Selectors :-
+Ex :-
+li : nth-of-type(even){
+  color:white;
+background:red;
+}
+
+Ex :-
+
+ul:nth-of-type(even){
+  color:cyan;
+background:lightblue;
+}
