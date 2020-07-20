@@ -1,0 +1,26 @@
+*{
+  color:blue;
+}
+
+li  a{
+  color:orange;
+}
+
+a+ul{
+  color:red;
+  background: yellow;
+}
+
+a[href="https://www.amazon.com"]{
+  color:red;
+}
+
+li:nth-of-type(even){
+  color:cyan;
+background:lightblue;
+}
+
+ul:nth-of-type(even){
+  color:green;
+background:red;
+}
